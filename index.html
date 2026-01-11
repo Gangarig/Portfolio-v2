@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minimal Portfolio</title>
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <span class="logo">Gangarig Nyamsuren</span>
+
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+          ☾
+        </button>
+      </div>
+    </header>
+
+
+    <main id="top" class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <h1 class="hero-title">Web Developer.</h1>
+
+        <p class="hero-subtitle muted">
+          Focused on building clean, user-friendly web applications with modern technologies.
+        </p>
+
+        <p class="hero-about">
+          Background in custom computer systems and two years of computer science studies.
+          Strong problem-solving mindset, customer-focused, and continuously improving
+          alongside full-time work.
+        </p>
+
+        <div class="hero-actions">
+        <a class="btn" href="./assets/resume.pdf" >
+          Resume
+        </a>
+
+        </div>
+      </div>
+    </section>
+
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <div class="section-head">
+          <h2 class="section-title">Projects</h2>
+        </div>
+
+        <div class="grid">
+          <article class="card project">
+            <div class="project-top">
+              <h3 class="project-title">Shift Planner</h3>
+              <span class="tag">Web App</span>
+            </div>
+            <p class="muted">
+              A scheduling tool with role-based views, quick edits, and clean weekly planning UI.
+            </p>
+            <div class="project-links">
+              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+              <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-top">
+              <h3 class="project-title">Minimal Portfolio</h3>
+              <span class="tag">UI</span>
+            </div>
+            <p class="muted">
+              Light/dark theme, responsive layout, and a small design system built with CSS tokens.
+            </p>
+            <div class="project-links">
+              <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="section-head">
+          <h2 class="section-title">Contact</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card contact-card">
+            <p class="contact-title">Let’s work together.</p>
+
+            <div class="contact-actions">
+              <a class="btn" href="mailto:gangarign@gmail.com">Email</a>
+
+              <button class="btn btn-ghost" type="button" id="copy-email">
+                Copy email
+              </button>
+
+              <a
+                class="btn btn-ghost"
+                href="https://www.linkedin.com/in/gangarig/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+
+            <p class="muted contact-hint" id="copy-hint" aria-live="polite"></p>
+          </div>
+
+          <form class="card form-card" method="POST" action="/contact">
+            <input class="input" name="name" placeholder="Your name" autocomplete="name" required />
+            <input
+              class="input"
+              type="email"
+              name="email"
+              placeholder="Your email"
+              autocomplete="email"
+              required
+            />
+            <textarea
+              class="input textarea"
+              name="message"
+              placeholder="Your message"
+              rows="4"
+              required
+            ></textarea>
+
+            <button class="btn" type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
+
+
+      <footer class="footer muted">
+        © <span id="year"></span> Gangarig Nyamsuren  · Built minimal
+      </footer>
+    </main>
+
+    <script src="./js/theme.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

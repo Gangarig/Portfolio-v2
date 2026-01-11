@@ -1,0 +1,356 @@
+.container {
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: var(--space-4);
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform var(--dur) var(--ease);
+}
+
+.icon-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Hero */
+.hero {
+  padding: var(--space-8) 0 var(--space-6);
+}
+.hero-about {
+  margin-top: var(--space-4);
+  max-width: 620px;
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+}
+
+
+.hero-title {
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  letter-spacing: -0.04em;
+}
+
+.hero-subtitle {
+  margin-top: var(--space-3);
+  font-size: var(--text-lg);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.hero-meta {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+/* Sections */
+.section {
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-head {
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.section-title {
+  font-size: var(--text-xl);
+}
+
+.section-subtitle {
+  font-size: var(--text-base);
+}
+
+/* Reusable */
+.muted {
+  color: var(--text-secondary);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.block {
+  padding: var(--space-5);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+  transition: transform var(--dur) var(--ease), filter var(--dur) var(--ease);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.btn:focus-visible,
+.icon-btn:focus-visible,
+.nav-link:focus-visible,
+.link:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--accent) 35%, transparent);
+  outline-offset: 3px;
+}
+
+.btn-ghost {
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+/* Projects grid */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-link {
+    display: none; /* keep it minimal on small screens */
+  }
+}
+
+.project {
+  padding: var(--space-5);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.project-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.project-title {
+  font-size: var(--text-lg);
+}
+
+.tag {
+  font-size: var(--text-sm);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.project-links {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.link {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in oklab, var(--text-primary) 30%, transparent);
+}
+
+/* Contact */
+.contact {
+  padding: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.contact-title {
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.contact-right {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Footer */
+.footer {
+  padding: var(--space-6) 0 var(--space-7);
+  font-size: var(--text-sm);
+}
+
+/* Contact layout */
+/* Contact */
+.contact-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-card,
+.form-card {
+  padding: var(--space-5);
+  background: color-mix(in oklab, var(--surface) 92%, var(--bg));
+  border: 1px solid var(--border);
+}
+
+.contact-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+/* Form */
+.form-card {
+  display: grid;
+  gap: var(--space-3);
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--surface) 90%, var(--bg));
+  color: var(--text-primary);
+  font: inherit;
+  transition: border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease),
+    background var(--dur) var(--ease);
+}
+
+.input::placeholder {
+  color: var(--text-secondary);
+}
+
+.input:focus {
+  outline: none;
+  border-color: color-mix(in oklab, var(--accent) 45%, var(--border));
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 18%, transparent);
+  background: var(--surface);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Small hint line */
+.contact-hint {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  min-height: 1.2em; /* keeps layout stable */
+}
+
+
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: #fff;
+
+  font-weight: 600;
+  font-size: var(--text-sm);
+  line-height: 1;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: transform var(--dur) var(--ease), filter var(--dur) var(--ease);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: translateY(0px);
+  filter: brightness(0.98);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border);
+}
