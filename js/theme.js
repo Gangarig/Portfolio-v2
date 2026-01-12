@@ -7,10 +7,8 @@ function applyTheme(theme) {
   toggle.textContent = theme === "dark" ? "☀" : "☾";
 }
 
-const savedTheme = localStorage.getItem("theme");
-applyTheme(savedTheme || "light");
+applyTheme(localStorage.getItem("theme") || "light");
 
 toggle.addEventListener("click", () => {
-  const current = root.getAttribute("data-theme");
-  applyTheme(current === "dark" ? "light" : "dark");
+  applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
 });

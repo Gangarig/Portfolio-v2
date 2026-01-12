@@ -7,11 +7,9 @@
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
 
-  --radius-sm: 10px;
   --radius-md: 14px;
   --radius-lg: 18px;
 
-  --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
@@ -20,10 +18,10 @@
   --space-7: 48px;
   --space-8: 64px;
 
-  --container: 1080px;
+  --container: 1040px;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 12px 34px rgba(0, 0, 0, 0.14);
 
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
   --dur: 180ms;
