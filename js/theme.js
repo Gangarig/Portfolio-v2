@@ -1,14 +1,7 @@
-const root = document.documentElement;
-const toggle = document.getElementById("theme-toggle");
-
-function applyTheme(theme) {
-  root.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);
-  toggle.textContent = theme === "dark" ? "☀" : "☾";
-}
-
-applyTheme(localStorage.getItem("theme") || "light");
-
-toggle.addEventListener("click", () => {
-  applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
-});
+// Apply the saved preference before the page is painted. Storage is optional.
+(() => {
+  try {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark" || theme === "light") document.documentElement.dataset.theme = theme;
+  } catch { /* The site remains usable when browser storage is blocked. */ }
+})();
