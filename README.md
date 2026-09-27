@@ -2,11 +2,11 @@
 
 A responsive portfolio built with semantic HTML, CSS, and vanilla JavaScript.
 
-**[Visit the portfolio](https://gangarig.github.io/Portfolio-v2/)** · **[Try ShiftPlanner](https://gangarig.github.io/shift-planner-demo/)**
+**[Visit the portfolio](https://gangarig.github.io/Portfolio-v2/)** · **[Try ShiftPlanner](https://gangarig.github.io/shift-planner-demo/)** · **[Try Nutag](https://gangarig.github.io/mn-vpn/)**
 
 ## Features
 
-- Project case study with a real ShiftPlanner demo screenshot
+- Project case studies with live ShiftPlanner and Nutag demos
 - Downloadable English CV
 - Responsive layout, keyboard navigation, and reduced-motion support
 - Light and dark themes; saved preferences are optional
